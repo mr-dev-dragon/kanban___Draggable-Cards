@@ -15,7 +15,7 @@ import { Column } from 'src/app/models/column.model';
 })
 export class MainViewComponent implements OnInit {
   constructor() {}
-
+  selected = 'option2';
   board: Board = new Board('Test Board', [
     new Column('Ideas', [
       'Some random idea',

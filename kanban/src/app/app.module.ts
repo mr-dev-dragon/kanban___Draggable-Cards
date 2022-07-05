@@ -8,11 +8,13 @@ import { MainViewComponent } from './pages/main-view/main-view.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [AppComponent, MainViewComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatSelectModule ,
     DragDropModule,
     MatFormFieldModule,
     BrowserAnimationsModule
