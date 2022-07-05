@@ -1,5 +1,6 @@
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {
   CdkDragDrop,
   moveItemInArray,
@@ -14,7 +15,7 @@ import { Column } from 'src/app/models/column.model';
   styleUrls: ['./main-view.component.scss'],
 })
 export class MainViewComponent implements OnInit {
-  constructor() {}
+  constructor(private module: NgbModal) {}
   selected = 'option2';
   board: Board = new Board('Test Board', [
     new Column('Ideas', [
@@ -41,6 +42,13 @@ export class MainViewComponent implements OnInit {
       'Walk dog',
     ]),
   ]);
+
+
+
+  open(content: any) {
+    this.module.open(content)
+   console.log(content)
+  }
 
   ngOnInit() {}
 

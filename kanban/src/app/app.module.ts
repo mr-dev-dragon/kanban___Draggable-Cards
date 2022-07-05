@@ -5,19 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainViewComponent } from './pages/main-view/main-view.component';
 
+import { MatInputModule } from '@angular/material/input';
+
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 @NgModule({
-  declarations: [AppComponent, MainViewComponent],
+  declarations: [
+    AppComponent,
+    MainViewComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatSelectModule ,
     DragDropModule,
+
+    MatInputModule ,
     MatFormFieldModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
